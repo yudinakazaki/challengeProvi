@@ -11,21 +11,26 @@ export const dashboardMenuData = [
   {
       title: "Profile",
       icon: <CgProfile />,
+      page:"profile",
   },
   {
       title: "Dashboard",
       icon: <MdDashboard />,
+      page:"/",
   },
   {
       title: "Messages",
       icon: <BiMessageSquareDetail />,
+      page:"messages",
   },
   {
       title: "Wallet",
       icon: <IoWalletOutline />,
+      page:"wallet",
   },
   {
       title: "Transactions History",
       icon: <FaHistory />,
+      page:"transaction-history",
   }
 ]

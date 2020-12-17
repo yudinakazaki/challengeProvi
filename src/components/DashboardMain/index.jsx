@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import { 
   DashboardMain, 
   DashboardContainer,
@@ -9,18 +9,12 @@ import {
 import { FcMoneyTransfer } from 'react-icons/fc'
 import { MdPayment } from 'react-icons/md'
 import { GrContactInfo } from 'react-icons/gr'
+import { useUserData } from '../../context/User'
 
 
 export default function(){
-  const [userData, setUserData] = useState([])
-  const [installments, setInstallments] = useState([])
-    useEffect ( async () => {
-      const res = await fetch('https://www.mocky.io/v2/5c923b0932000029056bce39')
-      const data = await res.json()
-
-      setUserData(data)
-      setInstallments(data.installments)
-  }, []  )
+ 
+  const { userData, installments } = useUserData()
 
   return(
     <DashboardMain>
